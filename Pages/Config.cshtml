@@ -1,0 +1,45 @@
+﻿@page
+@model ConfigModel
+@{
+    ViewData["Title"] = "Nobody Home Configuration";
+}
+<h2>@ViewData["Title"]</h2>
+
+<form method="post" class="form-horizontal">
+    <div class="form-group">
+        <label asp-for="@Model.Data.ApiKey" class="col-md-4 control-label"></label>
+        <div class="col-md-8">
+            <input asp-for="@Model.Data.ApiKey" class="form-control" />
+            <span asp-validation-for="@Model.Data.ApiKey" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Data.DeviceMac1" class="col-md-4 control-label"></label>
+        <div class="col-md-8">
+            <input asp-for="@Model.Data.DeviceMac1" class="form-control" />
+            <span asp-validation-for="@Model.Data.DeviceMac1" class="text-danger"></span>
+        </div>
+    </div>
+        <div class="form-group">
+        <label asp-for="@Model.Data.DeviceMac2" class="col-md-4 control-label"></label>
+        <div class="col-md-8">
+            <input asp-for="@Model.Data.DeviceMac2" class="form-control" />
+            <span asp-validation-for="@Model.Data.DeviceMac2" class="text-danger"></span>
+        </div>
+    </div>
+        <div class="form-group">
+        <label asp-for="@Model.Data.RemoteIp1" class="col-md-4 control-label"></label>
+        <div class="col-md-8">
+            <input asp-for="@Model.Data.RemoteIp1" class="form-control" />
+            <span asp-validation-for="@Model.Data.RemoteIp1" class="text-danger"></span>
+        </div>
+    </div>
+        <div class="form-group">
+        <label asp-for="@Model.Data.RemoteIp2" class="col-md-4 control-label"></label>
+        <div class="col-md-8">
+            <input asp-for="@Model.Data.RemoteIp2" class="form-control" />
+            <span asp-validation-for="@Model.Data.RemoteIp2" class="text-danger"></span>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-default pull-right">Save</button>
+</form>
